@@ -1,3 +1,9 @@
+html {
+
+  scroll-padding-top: 150px;    
+  scroll-behavior: smooth;
+}
+
 body {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
@@ -20,8 +26,23 @@ section {
     PHONE LAYOUT
 **********************/
 
-@media (orientation: portrait) and (max-width: 480px) {
+#scrollIndicator {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: rgb(101, 8, 8);
+    border: solid 2px yellow;
+    border-radius: 100px;
+    color: white;
+    
+}
 
+@media (orientation: portrait) and (max-width: 480px) {
+#scrollIndicator {
+    display:block;
+}
 
 }
 
@@ -30,6 +51,7 @@ section {
 
 
 }
+
 
 /********************
         HEADER
@@ -159,6 +181,7 @@ section {
 
 .menuNavContainer {
     box-sizing: border-box;
+    width: fit-content;
     display: block;
     padding-bottom: 30px;
     border-bottom: solid 2px var(--DoM-Yellow);
@@ -169,6 +192,7 @@ section {
 }
 
 #foodLinksHeader {
+    text-align: center;
     font-weight: bolder;
     font-size: 1.6em;
     margin-bottom: 20px;
@@ -208,6 +232,90 @@ section {
     transition: border-radius, 1s;
 }
 
+
+/*******************
+    THE MENU
+*******************/
+#menuContainer {
+    display: none;
+    padding: 20px;
+}
+.menuPage {
+    background-color: antiquewhite;
+    color: black;
+}
+
+#menuAppetizers, #menuEntrees {
+    display: none;
+}
+/* --- Layout Sections --- */
+.menu-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  text-align: center;
+  border-bottom: 2px solid #e0dbcd;
+  padding-bottom: 8px;
+  margin: 10px;
+  background-color: var(--DoM-Yellow);
+  color: #4a4a4a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- Flexible Menu Grid Layout --- */
+.menu-grid {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column default on mobile mobile screens */
+    gap: 30px;
+}
+
+.menu-grid > :nth-child(odd) {
+  background-color: rgb(230, 216, 198);
+  padding-left: 10px;
+}
+
+/* --- Single Item Elements --- */
+.menu-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between; /* Pushes Title left, Price right */
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.item-title {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.item-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #8b263e; /* Accent warm deep red for visibility */
+}
+
+.item-description {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* --- Responsive Adjustments for Larger Screens --- */
+@media (min-width: 768px) {
+  .menu-grid {
+    grid-template-columns: 1fr 1fr; /* Switches effortlessly to a 2-column list on desktop screens */
+    gap: 40px;
+  }
+}
 /*******************
     WEEKLY SPECIALS
 *******************/
@@ -238,7 +346,7 @@ section {
     width: 80%;
     max-width: 400px;
     min-height: 150px;
-    min-width: 150px;
+    min-width: 250px;
     overflow: hidden;
     border-radius: 10px;
     border: solid 2px rgba(198, 187, 89, .5);
@@ -280,15 +388,103 @@ section {
     width: 100%;
 }
 
+
+/*******************
+    LIVE MUSIC
+*******************/
+
+.blHeader {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.6em;
+    padding: 30px 0px;
+    background-color: var(--DoM-Brown);
+    border-top: 2px solid var(--DoM-Yellow);
+    color: var(--DoM-Yellow);
+}
+
+.BandListContainer {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: var(--DoM-Brown);
+    color: var(--DoM-Yellow);
+    padding: 20px;
+}
+
+.blCard {
+    position: relative;
+    width: 40%;
+    min-width: 300px;
+    margin:10px;
+    padding: 20px;
+    overflow-x: auto;
+    border: solid 2px var(--DoM-Yellow);
+    border-radius: 10px;
+    background-color: black;
+    color: var(--DoM-Yellow);
+}
+
+.blDay {
+    float: left;
+    font-size: 1.6em;
+    font-weight: bolder;
+    color: white;
+
+}
+
+.blBandName {
+    clear: left;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.8em;
+    font-weight: bolder;
+}
+
+.blShowDate {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.blShowTime {
+    margin: 10px;
+}
+
+.blImage {
+    width: 80%;
+    height: auto;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.blLink {
+    padding: 8px;
+    border-radius: 100px;
+    width: fit-content;
+    margin: auto;
+    background-color: green;
+    color: wheat;
+}
+
 /*******************
         FOOTER
 ********************/
 
 footer {
+    border-top: solid 2px var(--DoM-Yellow);
     box-sizing: border-box;
     padding: 20px;
     background-color: black;
     color: wheat;
     font-weight: bold;
     text-align: center;
+}
+
+.smLink {
+    display: inline;
+    width: 1.4em;
+    height: auto;
 }
