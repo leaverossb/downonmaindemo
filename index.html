@@ -4,7 +4,7 @@
   <title>Down on Main</title>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="256x256" href="Images/DoM_fav.bmp">
   <meta name="Down on Main | Bar and Grill in Mt Vernon, KY" content="Drinks, food, games and live music.  Everything needed for a night out!">
   <meta name="robots" content="index, follow">
 
@@ -17,7 +17,7 @@
 
   <!--Links-->
   <link rel="stylesheet" href="style.css">
-  <script href="main.js" defer></script>
+  <script src="main.js" defer></script>
 
   <!-- Schema Markup | Search Result Optmization-->
 
@@ -136,12 +136,12 @@
 
 <nav class="mainNav">
   <div class="nav-container">
-    <a href="#"><img src='Images/DoM.jpg' class="nav-logo"></a>
+    <img src='Images/DoM.jpg' class="nav-logo">
     <ul class="nav-links">
-      <li><a href="#food">Food</a></li>
-      <li><a href="#drinks">Drinks</a></li>
-      <li><a href="#schedule">Weekly Schedule</a></li>
-      <li><a href="#music">Live Music</a></li>
+      <li><a href="#foodDrink">Food</a></li>
+      <li><a href="#foodDrink">Drinks</a></li>
+      <li><a href="#weeklySpecials">Weekly Specials</a></li>
+      <li><a href="#liveMusic">Live Music</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -182,14 +182,14 @@
 
 <!-- Menu -->
 
-<section class="menuNavContainer">
+<section id="foodDrink" class="menuNavContainer">
     <div id="foodLinksHeader">Food and Drink</div>
-    <div class="catagoryContainer" id="mCatAppitizer">
-        <div class="mCatTitle">Apitizers</div>
+    <div class="catagoryContainer" id="mCatAppitizer" onclick="showMenuApps()">
+        <div class="mCatTitle">Appetizers</div>
         <div class="mCatImageContainer"><img src="Images/Nachos.jpg" class="mCatImage"></div>
     </div>
 
-    <div class="catagoryContainer" id="mCatEntrees">
+    <div class="catagoryContainer" id="mCatEntrees" onclick="showMenuEntrees()">
         <div class="mCatTitle">Entrees</div>
         <div><img src="Images/Burger.jpg" class="mCatImage"></div>
     </div>
@@ -205,12 +205,171 @@
     </div>
 </section>
 
+<!-- MENU CONTENT -->
+
+<!-- APPETIZERS -->
+
+<section id="menuContainer">
+    <section class="menuPage" id="menuAppetizers">
+        <h2 class="section-title">- -APPETIZERS- -</h2>
+        
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="item-header">
+                    <h3 class="item-title">Mozzarella Sticks</h3>
+                    <span class="item-price">$9.99</span>
+                </div>
+                <p class="item-description">Golden-fried artisan mozzarella logs served with warm, zesty marinara sauce.</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Fried Mushrooms</h3>
+                <span class="item-price">$9.99</span>
+            </div>
+            <p class="item-description">Crispy batter-dipped whole mushrooms fried golden brown and served with your choice of dip.</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Jack Bites</h3>
+                <span class="item-price">$9.99</span>
+            </div>
+            <p class="item-description">Crispy, golden-fried bite-sized cubes of spicy pepper jack cheese. Served with our house made ranch to balance the heat..</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Fried Pickles</h3>
+                <span class="item-price">$9.99</span>
+            </div>
+            <p class="item-description">Crispy, golden-brown dill pickle spears or chips crusted in a cornmeal and herb breading. Served with a side of creamy house ranch for dipping.</p>
+            </div>
+            
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Spinach & Artichoke Dip</h3>
+                <span class="item-price">$10.99</span>
+            </div>
+            <p class="item-description">A creamy, bubbling blend of tender spinach, artichoke hearts, and melted cheeses. Served hot with a basket of crisp, salted tortilla chips.</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Giant Soft Pretel</h3>
+                <span class="item-price">$10.99</span>
+            </div>
+            <p class="item-description">Oversized warm soft pretzel brushed with butter, salted, and served with a side of nacho cheese.  Upgrade to creamy beer cheese +.50.</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Cheezy Bread</h3>
+                <span class="item-price">$8.99</span>
+            </div>
+            <p class="item-description">Freshly baked garlic pull-apart bread loaded with bubbly, melted mozzarella cheese and served with marinara.</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Sampler Platter</h3>
+                <span class="item-price">$11.99</span>
+            </div>
+            <p class="item-description">Wings, Tenders, Mozzarella Sticks, Fried Pickles, Jack Bites and Fried Mushrooms.</p>
+            </div>
+
+        </div>
+    </section>
+
+<!-- BURGERS  -->
+
+    <section class="menuPage" id="menuBurgers">
+        <h2 class="section-title">- -BURGERS- -</h2>
+        <h3 style="padding-left: 20px; font-style: italic;">served with fries</h3>
+        
+        <div class="menu-grid">
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Ultimate Burger</h3>
+                <span class="item-price">$10.99</span>
+            </div>
+            <p class="item-description">Half-Pound Burger with American Cheese, Lettuce, Tomato, Onion, Pickles, Mayo, Mustard.  Add Bacon .50</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Smash Burger</h3>
+                <span class="item-price">$10.99</span>
+            </div>
+            <p class="item-description">2 Smashed Hamburger Patties with Grilled Onions and American Cheese</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Adam Burger</h3>
+                <span class="item-price">$11.99</span>
+            </div>
+            <p class="item-description">Half-Pound Burger with a Fried Egg, Blackberry Jam, and Jalapenos.</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Pizza Burger</h3>
+                <span class="item-price">$11.99</span>
+            </div>
+            <p class="item-description">Half-Pound Burger with Melted Mozzarella, Marinara, Pepperoni.</p>
+            </div>
+            
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Beer Cheese Burger</h3>
+                <span class="item-price">$11.99</span>
+            </div>
+            <p class="item-description">Half-Pound Burger with Beer Cheese & Jalapenos</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Eve Burger</h3>
+                <span class="item-price">$12.99</span>
+            </div>
+            <p class="item-description">Half-Pound Burger with Pulled Pork, Fried Egg, Blackberry Jam, served on Texas Toast</p>
+            </div>
+        </div>
+
+    </section>
+
+<!-- SANDWICHES -->
+
+    <section class="menuPage" id="menuSandwiches">       
+            <h2 class="section-title">- -SANDWICHES- -</h2>
+            <h3 style="padding-left: 20px; font-style: italic;">served with fries</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Reuben</h3>
+                <span class="item-price">$11.99</span>
+            </div>
+            <p class="item-description">Thinly Sliced Corned Beef with Provolone, Souerkraut, Thousand Island and served on Rye.</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Philly</h3>
+                <span class="item-price">$10.99</span>
+            </div>
+            <p class="item-description">Tender Beef, Onions, Green Peppers, topped with Provolone and served on a grilled Hoagie</p>
+            </div>
+
+        </div>
+    </section>
+</section>
 
 <!-- Weekly Line up-->
 
 <div class="WSheader">Weekly Specials</div>
 
-<section class="WeeklySpecialsContainer">
+<section id="weeklySpecials" class="WeeklySpecialsContainer">
 
     <div class="wsCard" id="wsCard1">
         <div class="wsDay">
@@ -276,18 +435,72 @@
 
 <!--Live Band Schedule-->
 
+<div class="blHeader">Live Music</div>
+
+<section id="liveMusic" class="BandListContainer">
+
+    <div class="blCard" id="blCard1">
+        <div class="blDay">
+            Friday
+        </div>
+        <div class="blBandName" id="bN1">
+            Band 1
+        </div>
+        <div class="blGenre" id="bG1">
+            Genre
+        </div>
+        <div class='blImageContainer'>
+            <img src="" class="blImage" id="bI1">
+        </div>
+        <div class="blShowDate" id="bD1">
+            14 Sep 2026
+        </div>
+        <div class="blShowTime" id="bT1">
+            8:00 PM
+        </div>
+        <div class="blLink" id="bL2">
+            Learn More
+        </div>
+    </div>
+
+    <div class="blCard" id="blCard1">
+        <div class="blDay">
+            Saturday
+        </div>
+        <div class="blBandName" id="bN2">
+            Band 1
+        </div>
+        <div class="blGenre" id="bG2">
+            Genre
+        </div>
+        <div class='blImageContainer'>
+            <img src="" class="blImage" id="bI2">
+        </div>
+        <div class="blShowDate" id="bD2">
+            14 Sep 2026
+        </div>
+        <div class="blShowTime" id="bT2">
+            8:00 PM
+        </div>
+        <div class="blLink" id="bL2">
+            Learn More
+        </div>
+    </div>
+</section>
+
+<div id="scrollIndicator">
+scroll to see more! >>>
+</div>
+
 
 <!-- Footer -->
-<footer>
-<div>
-
-</div>
-<p>Down on Main</p>
-<p>Address: </p>
-<p>Phone</p>
-<p>Facebook</p>
-  
+<footer id="contact">
+    <p>Down on Main Bar and Grill</p>
+    <p>95 E Main St, Mt Vernon, KY 40456</p>
+    <p>(606) 392-2316</p>
+    <p ><a href="https://www.facebook.com/p/Down-on-Main-Bar-Grill-100076480204484/"><img class="smLink" src='Images/Facebook_Logo_2023.png'></a> 
+    <a href="https://www.instagram.com/downonmain_/"><img class="smLink" src='Images/Instagram_icon.png'></a></a></p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.546762116004!2d-84.3396009!3d37.3532376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8842d9eb7fe470a3%3A0xa617064b3d0290ec!2sDown%20On%20Main!5e0!3m2!1sen!2sca!4v1789403430122!5m2!1sen!2sca" width="200" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 </footer>
-
 </body>
 </html>
