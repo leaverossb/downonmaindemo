@@ -156,16 +156,16 @@
 <!-- Food Images-->
 <section class="food-image-container">
     <div id="foodImage1" class="foodImageDiv">
-        <img src="Images/Burger.jpg" class="foodImage">
+        <img id="FI1" src="Images/Burger.jpg" class="foodImage">
     </div>
     <div id="foodImage2" class="foodImageDiv">
-        <img src="Images/Beer.jpg" class="foodImage">
+        <img id="FI2" src="Images/Beer.jpg" class="foodImage">
     </div>
     <div id="foodImage3" class="foodImageDiv">
-        <img src="Images/Wings.jpg" class="foodImage">
+        <img id="FI3" src="Images/Wings.jpg" class="foodImage">
     </div>
     <div id="foodImage4" class="foodImageDiv">
-        <img src="Images/Bourbon.jpg" class="foodImage">
+        <img id="FI4" src="Images/Bourbon.jpg" class="foodImage">
     </div>
 </section>
 
@@ -183,7 +183,7 @@
 <!-- Menu -->
 
 <section id="foodDrink" class="menuNavContainer">
-    <div id="foodLinksHeader">Food and Drink</div>
+    <div id="foodLinksHeader">Food and Drink Menu</div>
     <div class="catagoryContainer" id="mCatAppitizer" onclick="showMenuApps()">
         <div class="mCatTitle">Appetizers</div>
         <div class="mCatImageContainer"><img src="Images/Nachos.jpg" class="mCatImage"></div>
@@ -199,17 +199,20 @@
         <div><img src="Images/Drink1.jpg" class="mCatImage"></div>
     </div>
 
-    <div class="catagoryContainer" id="mCatSweets">
-        <div class="mCatTitle">Sweets</div>
+    <div class="catagoryContainer" id="mCatSweets" onclick="showMenuSweets()">
+        <div class="mCatTitle" >Sweets</div>
         <div><img src="Images/CheeseCake.jpg" class="mCatImage"></div>
     </div>
 </section>
 
 <!-- MENU CONTENT -->
 
-<!-- APPETIZERS -->
+
 
 <section id="menuContainer">
+
+<!-- APPETIZERS -->
+
     <section class="menuPage" id="menuAppetizers">
         <h2 class="section-title">- -APPETIZERS- -</h2>
         
@@ -361,9 +364,423 @@
             <p class="item-description">Tender Beef, Onions, Green Peppers, topped with Provolone and served on a grilled Hoagie</p>
             </div>
 
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">KY Bacon Steak Melt</h3>
+                <span class="item-price">$11.99</span>
+            </div>
+            <p class="item-description">Tender Beef, Bacon, American Cheese served on Texas Toast.</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Chicken Sandwich</h3>
+                <span class="item-price">$10.99</span>
+            </div>
+            <p class="item-description">Grilled or Fried Chicken with American Cheese, Lettuce, Tomato, Onion on Texas Toast</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Chicken Parmesan</h3>
+                <span class="item-price">$11.99</span>
+            </div>
+            <p class="item-description">Grilled or Fried Chicken with Marinara, Provolone, & Pepperoni served on a Hoagie or Texas Toast.</p>
+            </div>
+
+           <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Chicken Bacon Ranch</h3>
+                <span class="item-price">$11.99</span>
+            </div>
+            <p class="item-description">Grilled Chicken, Bacon and Ranch served on Texas Toast</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Pulled Pork Grilled Cheese</h3>
+                <span class="item-price">$10.99</span>
+            </div>
+            <p class="item-description">Grilled Cheese with Pulled Pork served on Texas Toast</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Fish Sandwich</h3>
+                <span class="item-price">$10.99</span>
+            </div>
+            <p class="item-description">Breaded Cod with Cheese, Lettuce, Tomato, Onions served on a Hoagie Bun</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Pork Tenderloin</h3>
+                <span class="item-price">$10.99</span>
+            </div>
+            <p class="item-description">Pork Tenderloin dressed your way and served on Texas Toast</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Turkey Sub</h3>
+                <span class="item-price">$10.99</span>
+            </div>
+            <p class="item-description">Turkey, Lettuce, Tomato, Onion, Banana Peppers, American Cheese, and Mayo on a Hoagie</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">BLT</h3>
+                <span class="item-price">$8.99</span>
+            </div>
+            <p class="item-description">Hearty portion of Bacon, Lettuce, Tomato, Mayo, and served on Texas Toast.  Add a Fried Egg +1.00</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Sliders</h3>
+                <span class="item-price">$10.99</span>
+            </div>
+            <p class="item-description">3 Chicken or Hamburger Sliders</p>
+            </div>
         </div>
     </section>
-</section>
+
+<!-- NON-SANDWICH -->
+
+    <section class="menuPage" id="menuNonSandwich">       
+            <h2 class="section-title">- -NON-SANDWICH- -</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Pulled Pork Nachos</h3>
+                <span class="item-price">$10.99</span>
+            </div>
+            <p class="item-description">Deep Fried Chips, Pulled Pork, Nacho Cheese, Jalapeno</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Pulled Pork Tacos</h3>
+                <span class="item-price">$10.99</span>
+            </div>
+            <p class="item-description">3 Pulled Pork Tacos with Pico</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Pizza Bowl</h3>
+                <span class="item-price">$11.99</span>
+            </div>
+            <p class="item-description">Pizza without the Crust; Pick your toppings</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Pulled Pork Mac</h3>
+                <span class="item-price">$11.99</span>
+            </div>
+            <p class="item-description">All White Mac N' Cheese with Pulled Pork and BBQ Sauce</p>
+            </div>
+    </section>
+
+<!-- WINGS -->
+
+    <section class="menuPage" id="menuWings">       
+            <h2 class="section-title">- -WINGS- -</h2>
+            <hr/>
+            <h3 style="text-align: center;">TRADITIONAL OR BONELESS</h3>
+            <p style="text-align: center;">Fire, Hot, Mild, Parmesan Garlic, Sweet Thai Chili, Carolina Gold, DOM Sauce</p>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-header">
+                    <h3 class="item-title">6 Wings</h3>
+                    <span class="item-price">$9.99</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                    <h3 class="item-title">9 Wings</h3>
+                    <span class="item-price">$12.99</span>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                    <h3 class="item-title">12 Wings</h3>
+                    <span class="item-price">$14.99</span>
+                </div>
+            </div>
+
+    </section>
+
+<!-- PIZZA -->
+
+    <section class="menuPage" id="menuPizza">       
+            <h2 class="section-title">- -PIZZA- -</h2>
+            <h3 style="padding-left: 20px; font-style: italic;">CAULIFLOWER CRUST ADD 2.00</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">1-Topping</h3>
+                <span class="item-price">12" $11.99<br>7" $9.99</span>
+            </div>
+            <p class="item-description">Your Choice of Topping</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Veggie</h3>
+                <span class="item-price">12" $11.99<br>7" $9.99</span>
+            </div>
+            <p class="item-description">Onions, Green Pepper, Black Olive, Mushroom, Banana Pepper</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Supreme</h3>
+                <span class="item-price">12" $13.99<br>7" $11.99</span>
+            </div>
+            <p class="item-description">Pepperoni, Sausage, Onions, Mushrooms, Black Olives, Green Peppers, Banana Peppers</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Meat Lovers</h3>
+                <span class="item-price">12" $13.99<br> 7" $11.99</span>
+            </div>
+            <p class="item-description">Pepperoni, Sausage, Ham, Bacon</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Chicken Bacon Ranch</h3>
+                <span class="item-price">12" $13.99<br>7" $11.99</span>
+            </div>
+            <p class="item-description">Ranch Base, Mozzarrella, Grilled Chicken, Bacon</p>
+            </div>
+
+           <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Philly</h3>
+                <span class="item-price">12" $13.99<br> 7" $11.99</span>
+            </div>
+            <p class="item-description">A1 Base, Mozzarella, Thin Sliced Beef, Peppers, Onion</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Buffalo Chicken</h3>
+                <span class="item-price">12" 13.99<br>7" $11.99</span>
+            </div>
+            <p class="item-description">Buffalo Base, Mozzarella, Grilled Chicken, Ranch</p>
+            </div>
+
+        </div>
+    </section>
+
+<!-- SPUDS -->
+
+    <section class="menuPage" id="menuSpuds">       
+            <h2 class="section-title">- -SPUDS- -</h2>
+            <h3 style="padding-left: 20px; font-style: italic;">CHOOSE FRIES OR TOTS</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Philly</h3>
+                <span class="item-price">$10.99</span>
+            </div>
+            <p class="item-description">Fries or Tots covered in A1, Thinly sliced Beef, Provolone, Peppers & Onions</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">BLT</h3>
+                <span class="item-price">$9.99</span>
+            </div>
+            <p class="item-description">Fries or Tots covered in house made Ranch, Lettuce and Tomato</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Pizza</h3>
+                <span class="item-price">$10.99</span>
+            </div>
+            <p class="item-description">Fries or Tots covered in Marinara, Mozarella, & topping of your choice</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">The Rocket</h3>
+                <span class="item-price">$12.99</span>
+            </div>
+            <p class="item-description">Fries or Tots covered in Cheddar Cheese, Ranch, Tomato, Onions, Jalapenos and Topped with 3 Boneless Wings tossed in your choice of sauce</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Chili Cheese</h3>
+                <span class="item-price">$8.99</span>
+            </div>
+            <p class="item-description">Fries or Tots covered in Chili and Cheese</p>
+            </div>
+
+        </div>
+    </section>
+
+<!-- SALADS -->
+
+    <section class="menuPage" id="menuSalads">       
+            <h2 class="section-title">- -SALADS- -</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">SteakHouse</h3>
+                <span class="item-price">CHICKEN $10.99<br>STEAK $12.99</span>
+            </div>
+            <p class="item-description">Romaine Lettuce, Cucumber, Tomato, Boiled Egg, Shredded Cheese, Bacon Bits, Crutons</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">House Salad</h3>
+                <span class="item-price">$8.99</span>
+            </div>
+            <p class="item-description">Iceburg Lettuce, Cucumber, Tomato, Shredded Cheese, Croutons <br><br>Chicken + 1.00 <br>Steak +2.00</p>
+            </div>
+
+        </div>
+    </section>
+
+<!-- SIDES -->
+
+    <section class="menuPage" id="menuSides">       
+            <h2 class="section-title">- -SIDES- -</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Fries</h3>
+                <span class="item-price">$1.99</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Tots</h3>
+                <span class="item-price">$2.99</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Onion Rings</h3>
+                <span class="item-price">$2.99</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Coleslaw</h3>
+                <span class="item-price">$1.99</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Mac N' Cheese</h3>
+                <span class="item-price">$3.99</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Side Salad</h3>
+                <span class="item-price">$3.99</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Cucumber and Tomato Salad</h3>
+                <span class="item-price">$3.99</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Cup of Chili</h3>
+                <span class="item-price">$5.99</span>
+            </div>
+        </div>
+    </section>
+
+<!-- SWEETS -->
+
+    <section class="menuPage" id="menuSweets">       
+            <h2 class="section-title">- -SWEET TOOTH- -</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Deep Fried Cheesecake</h3>
+                <span class="item-price">$6.99</span>
+            </div>
+            <p class="item-description">Cheesecake in a Flaky Crust topped with your choice of Strawberry, Chocolate or Caramel</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Apple Dumplin</h3>
+                <span class="item-price">$6.99</span>
+            </div>
+            <p class="item-description">Flaky Apple Dumplin served with Ice Cream</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Rockslide Brownie</h3>
+                <span class="item-price">$6.99</span>
+            </div>
+            <p class="item-description">Hot Brownie topped with Caramel & Pecans served with Ice Cream</p>
+            </div>
+
+
+    </section>
+
+<!-- DRINKS -->
+
+    <section class="menuPage" id="menuSweets">       
+            <h2 class="section-title">- -COCKTAIL- -</h2>
+            <h3 style="padding-left: 20px; font-style: italic;">BEER</h3>
+
+        <div class="menu-grid">
+            <div class="menu-item">
+            <div class="item-header">
+
+                <h3 class="item-title">Deep Fried Cheesecake</h3>
+                <span class="item-price">$6.99</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Apple Dumplin</h3>
+                <span class="item-price">$6.99</span>
+            </div>
+            <p class="item-description">Flaky Apple Dumplin served with Ice Cream</p>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Rockslide Brownie</h3>
+                <span class="item-price">$6.99</span>
+            </div>
+            <p class="item-description">Hot Brownie topped with Caramel & Pecans served with Ice Cream</p>
+            </div>
+
+
+    </section>
+
+    <div id="menuCloseBtn" onclick="closeAllMenus()">X</div>
+</section><!-- Contains all Menus -->
 
 <!-- Weekly Line up-->
 
@@ -430,6 +847,11 @@
             <img src="" class="wsImage">
         </div>
     </div>    
+
+    <div id="scrollIndicatorA">
+    scroll for more SPECIALS ! ! >>>
+    </div>
+
 </section>
 
 
@@ -458,7 +880,7 @@
         <div class="blShowTime" id="bT1">
             8:00 PM
         </div>
-        <div class="blLink" id="bL2">
+        <div onclick="FridayBandBioToggle()" class="blLink" id="bL2">
             Learn More
         </div>
     </div>
@@ -482,14 +904,28 @@
         <div class="blShowTime" id="bT2">
             8:00 PM
         </div>
-        <div class="blLink" id="bL2">
+        <div onclick="SaturdayBandBioToggle()" class="blLink" id="bL2">
             Learn More
         </div>
     </div>
+
+    <div id="scrollIndicatorB">
+    🎵 scroll for more MUSIC ! 🎵 >>>
+    </div>
+
 </section>
 
-<div id="scrollIndicator">
-scroll to see more! >>>
+<div id="bandBioContainer">
+    
+    <div id="BandBCScrollArea">
+        <button id="BBcloseButton" onclick="closeBB()">X</button>
+        <div id="bandTitle">Band Name</div>
+        <div id="bandGenre">Band Genre</div>
+        <div id="bandSocialMedia"></div>
+        <div id="bandBio"></div>
+        <img id="bandPicSmall" src="">
+    </div>
+    <img id="bandPic" src="">
 </div>
 
 
