@@ -29,30 +29,30 @@ let bands = [
     'name': 'Uptown Gypsy',
     'genre': 'Rock, Country, Blues',
     'image': 'Images/Band_Images/UTG.png',
-    'bio' : 'A high energy rock, country and blues band from right here in KY that always brings the party.',
-    'link1' : 'https://www.tiktok.com/@uptown.gypsy',
-    'link2' : 'https://www.facebook.com/uptown.gyspy.2025/',
+    'bio' : '<p>Uptown Gypsy is a high-energy variety cover band based in Kentucky known for playing dance hits across a wide range of musical styles.</p> <h3>Band Overview & Style</h3> <ul><li>Genre & Vibe: High-energy live music, dance tunes, soul, and rock.</li><li>Performances: Frequently plays local venues, festivals, and family-friendly dance nights across Kentucky (such as The Silver Eagle in Mount Vernon and the Triple Crown Tavern in Richmond)</li></ul>',
+    'link1' : '<a href="https://www.tiktok.com/@uptown.gypsy">TikTok</a>',
+    'link2' : '<a href="https://www.facebook.com/uptown.gyspy.2025/">Facebook</a>',
     'showDate': '2026-09-19T20:00:00', // date format YYYY-MM-DD | must be formatted like this for automation
     'showTime': '8:00 PM - 10:00 PM',
   },
   {
-    'name': 'name',
-    'genre': 'genre',
-    'image': 'url...',
-    'bio' : 'bio',
+    'name': 'Test Name',
+    'genre': 'Country',
+    'image': 'Images/Band_Images/Band2.jpg',
+    'bio' : '<h3>Band Info</h3><p>Info goes here.  What they play, where they have been. This text is mostly for testing image behavior and other cascading effects of dynamic text generation.</p>',
     'link1' : '',
     'link2' : '',
-    'showDate': '2026-12-31T20:00:00', // date format YYYY-MM-DD | must be formatted like this for automation
+    'showDate': '2026-09-25T20:00:00', // date format YYYY-MM-DD | must be formatted like this for automation
     'showTime': '8:00 PM - 11:00 PM',
   },
   {
-    'name': 'name',
-    'genre': 'genre',
-    'image': 'url...',
-    'bio' : 'bio',
-    'link1' : '',
+    'name': 'Another Band',
+    'genre': 'Rock',
+    'image': 'Images/Band_Images/Band3.jpg',
+    'bio' : '<h3>Band Info</h3><p>HTML is stored in the JSON object.  It works</p>',
+    'link1' : '<a href="https://wwww.google.com">Test Link</a>',
     'link2' : '',
-    'showDate': '2026-12-31T20:00:00', // date format YYYY-MM-DD | must be formatted like this for automation
+    'showDate': '2026-09-26T20:00:00', // date format YYYY-MM-DD | must be formatted like this for automation
     'showTime': '8:00 PM - 11:00 PM',
   },
   {
@@ -101,15 +101,19 @@ console.log("Sunday:", sunday.toDateString());
 
 let thisWeek = [];
 
+/*
 if (now > storedDate) {
   console.log('The current time is after the stored date.');
 } else {
   console.log('The current time is before or equal to the stored date.');
 }
+*/
+let fridayBand;
+let saturdayBand;
 
 function findBands() {
     let totalBands = bands.length;
-    let fridayDate = friday.toISOString().split('T')[0]; 
+    let fridayDate = friday.toISOString().split('T')[0]; //split T removes time from date string
     let saturdayDate = saturday.toISOString().split('T')[0];
 
     for (let i = 0; i <= (totalBands - 1); i++) {
@@ -121,14 +125,16 @@ function findBands() {
 
       //console.log('band date = ', bandDateOnly, 'this friday = ', fridayDate);
       if(bandDateOnly == fridayDate) {
-        console.log("band : ", i, " ", bandName);
+        //console.log("band : ", i, " ", bandName);
+        fridayBand = bands[i];
         document.getElementById('bN1').innerText = bands[i].name;
         document.getElementById('bG1').innerText = bands[i].genre;
         document.getElementById('bD1').innerText = fD;
         document.getElementById('bT1').innerText = bands[i].showTime;
         document.getElementById('bI1').src = bands[i].image;
       } else if(bandDateOnly == saturdayDate) {
-        console.log("band : ", i, " ", bandName);
+        //console.log("band : ", i, " ", bandName);
+        saturdayBand = bands[i];
         document.getElementById('bN2').innerText = bands[i].name;
         document.getElementById('bG2').innerText = bands[i].genre;
         document.getElementById('bD2').innerText = sD;
@@ -147,33 +153,171 @@ let menuSweetsVisible = false;
 
 function showMenuApps() {
   if (!menuAppsVisible) {
+    closeAllMenus();
     document.getElementById('menuContainer').style.display = 'block';
     document.getElementById('menuAppetizers').style.display = 'block';
-    //close others
-    document.getElementById('menuSandwiches').style.display = 'none';  
-    document.getElementById('menuBurgers').style.display = 'none';
+    window.location.hash ="#foodDrink"
     menuAppsVisible = true;
   } else {
-    document.getElementById('menuContainer').style.display = 'none';
-    document.getElementById('menuAppetizers').style.display = 'none';
-    menuAppsVisible = false;
-    menuEntreesVisible = false;
+    closeAllMenus();
+
   }
 }
 
 function showMenuEntrees() {
   if (!menuEntreesVisible) {
+    closeAllMenus();
     document.getElementById('menuContainer').style.display = 'block';
     document.getElementById('menuBurgers').style.display = 'block';
     document.getElementById('menuSandwiches').style.display = 'block';
-    //close others
-    document.getElementById('menuAppetizers').style.display = 'none';
+    document.getElementById('menuNonSandwich').style.display = 'block';
+    document.getElementById('menuWings').style.display = 'block';
+    document.getElementById('menuPizza').style.display = 'block';
+    document.getElementById('menuSpuds').style.display = 'block';
+    document.getElementById('menuSalads').style.display = 'block';
+    document.getElementById('menuSides').style.display = 'block';
+    window.location.hash ="#foodDrink"
     menuEntreesVisible = true;
   } else {
+
+    closeAllMenus();
+  }
+}
+
+function showMenuSweets() {
+  if (!menuSweetsVisible) {
+    closeAllMenus();
+    document.getElementById('menuContainer').style.display = 'block';
+    document.getElementById('menuSweets').style.display = 'block';
+    window.location.hash ="#foodDrink";
+    menuSweetsVisible = true;
+  } else {
+
+    closeAllMenus();
+  }
+}
+
+function closeAllMenus() {
+    menuAppsVisible = false;
+    menuEntreesVisible = false;
+    menuSweetsVisible = false;
     document.getElementById('menuContainer').style.display = 'none';
     document.getElementById('menuBurgers').style.display = 'none';
     document.getElementById('menuSandwiches').style.display = 'none';
-    menuEntreesVisible = false;
-    menuAppsVisible = false;
-  }
+    document.getElementById('menuNonSandwich').style.display = 'none';
+    document.getElementById('menuWings').style.display = 'none';
+    document.getElementById('menuPizza').style.display = 'none';
+    document.getElementById('menuSpuds').style.display = 'none';
+    document.getElementById('menuSalads').style.display = 'none';
+    document.getElementById('menuSides').style.display = 'none';
+    document.getElementById('menuSweets').style.display = 'none';
+    document.getElementById('menuAppetizers').style.display = 'none';
+    window.location.hash ="#foodDrink";
 }
+
+function FridayBandBioToggle() {
+    document.getElementById('bandBioContainer'). style.display = "grid";
+
+    let BN = fridayBand.name;
+    let BG = fridayBand.genre;
+    let BI = fridayBand.image;
+    let BL1 = fridayBand.link1;
+    let BL2 = fridayBand.link2;
+    let BB = fridayBand.bio;
+
+    document.getElementById('bandTitle').innerText = BN;
+    document.getElementById('bandGenre').innerText = BG;
+    document.getElementById('bandPic').src = BI;
+    document.getElementById('bandPicSmall').src = BI;
+    if (BL1 !== null) {
+          document.getElementById('bandSocialMedia').innerHTML = '<p>'+ BN + ' On Social Media'+ '</p>' + BL1 + '<br>' + BL2;
+    }
+
+    document.getElementById('bandBio').innerHTML = BB;
+
+}
+
+function SaturdayBandBioToggle() {
+    document.getElementById('bandBioContainer'). style.display = "grid";
+
+    let BN = saturdayBand.name;
+    let BG = saturdayBand.genre;
+    let BI = saturdayBand.image;
+    let BL1 = saturdayBand.link1;
+    let BL2 = saturdayBand.link2;
+    let BB = saturdayBand.bio;
+
+    document.getElementById('bandTitle').innerText = BN;
+    document.getElementById('bandGenre').innerText = BG;
+    document.getElementById('bandPic').src = BI;
+    document.getElementById('bandPicSmall').src = BI;
+    if (BL1 !== null) {
+          document.getElementById('bandSocialMedia').innerHTML = '<p>'+ BN + ' On Social Media'+ '</p>' + BL1 + '<br>' + BL2;
+    }
+
+    document.getElementById('bandBio').innerHTML = BB;
+
+}
+
+function closeBB() {
+  document.getElementById('bandBioContainer').style.display = "none";
+}
+
+
+/**************************
+      IMAGE RANDOMIZER
+***************************/
+let RandomizerTimer = 3000; //in milliseconds
+
+let imageGallery = ["Images/1.JPG","Images/2.JPG", "Images/3.JPG", "Images/4.JPG", "Images/5.JPG", "Images/6.JPG","Images/7.JPG", "Images/8.JPG", "Images/9.JPG"];
+
+let frameOptions = ["FI1", "FI2", "FI3", "FI4"];
+
+let availableFrames = [];
+let availableImages = [];
+let AFCount = availableFrames.length;
+let AICount = availableImages.length;
+
+const intervalId = setInterval(() => {
+
+  //restore the frame options
+  if (AFCount == 0) {
+    availableFrames = frameOptions;
+  } 
+
+  //restore image options
+  if (AICount == 0) {
+    availableImages = imageGallery;
+  }
+
+  AFCount = availableFrames.length;
+  AICount = availableImages.length;
+
+  let frameChoice = availableFrames[Math.floor(Math.random() * availableFrames.length)];
+  let chosenFrame = frameChoice;
+  //remove that choice from the array
+  availableFrames = availableFrames.filter(item => item !== frameChoice);
+
+  let imageChoice = availableImages[Math.floor(Math.random() * availableImages.length)];
+  //remove that choice from the array
+  availableImages = availableImages.filter(item => item !== imageChoice);
+
+  let imageDiv = document.getElementById(frameChoice);
+
+  if(frameChoice !== null) {
+
+    //make the image transparent
+    imageDiv.classList.add('foodImageFade');
+
+    //new image fades in
+    setTimeout(() => {
+      imageDiv.src = imageChoice;
+      // 3. Remove class to fade back in
+      imageDiv.classList.remove('foodImageFade');
+    }, 800); // Match this delay to your CSS transition duration (0.4s = 400ms)
+
+    //console.log(frameChoice);
+  }
+}, RandomizerTimer);
+
+
