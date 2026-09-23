@@ -16,6 +16,7 @@
   <meta property="og:type" content="business.business">
 
   <!--Links-->
+  <meta name="referrer" content="strict-origin-when-cross-origin" /> <!-- Pertains to YouTube Videos -->
   <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
 
@@ -169,6 +170,18 @@
     </div>
 </section>
 
+<!-- Performance Videos -->
+<iframe 
+  width="315" 
+  height="560" 
+  src="https://youtube.com/n395Dd6lM9A?si=a4lyMC7g338ZF_nA" 
+  title="YouTube Shorts player" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen
+  referrerpolicy="strict-origin-when-cross-origin">
+</iframe>
+
 <!-- Description -->
 
 <section class ='description-container'>
@@ -194,7 +207,7 @@
         <div><img src="Images/Burger.jpg" class="mCatImage"></div>
     </div>
 
-    <div class="catagoryContainer" id="mCatDrinks">
+    <div class="catagoryContainer" id="mCatDrinks" onclick="showMenuDrinks()">
         <div class="mCatTitle">Drinks</div>
         <div><img src="Images/Drink1.jpg" class="mCatImage"></div>
     </div>
@@ -215,6 +228,11 @@
 
     <section class="menuPage" id="menuAppetizers">
         <h2 class="section-title">- -APPETIZERS- -</h2>
+        <div class="menuSelectionImages">
+            <img id="menuImage1" class="menuSelectionImg" src="Images/4.JPG">
+            <img id="menuImage2" class="menuSelectionImg" src="Images/2.JPG">
+            <img id="menuImage3" class="menuSelectionImg" src="Images/6.JPG">
+        </div>
         
         <div class="menu-grid">
             <div class="menu-item">
@@ -287,6 +305,13 @@
 <!-- BURGERS  -->
 
     <section class="menuPage" id="menuBurgers">
+
+        <div class="menuSelectionImages">
+            <img id="menuImage1" class="menuSelectionImg" src="Images/1.JPG">
+            <img id="menuImage2" class="menuSelectionImg" src="Images/5.JPG">
+            <img id="menuImage3" class="menuSelectionImg" src="Images/7.JPG">
+        </div>
+
         <h2 class="section-title">- -BURGERS- -</h2>
         <h3 style="padding-left: 20px; font-style: italic;">served with fries</h3>
         
@@ -747,36 +772,261 @@
 
 <!-- DRINKS -->
 
-    <section class="menuPage" id="menuSweets">       
+    <section class="menuPage" id="menuDrinks">       
             <h2 class="section-title">- -COCKTAIL- -</h2>
-            <h3 style="padding-left: 20px; font-style: italic;">BEER</h3>
 
+        <div class="menuSelectionImages">
+            <img id="menuImage1" class="menuSelectionImg" src="Images/9.JPG">
+            <img id="menuImage2" class="menuSelectionImg" src="Images/10.JPG">
+        </div>
+
+            <h3 style="text-align: center; font-style: italic;">- SIGNATURE COCKTAILS - </h3>
         <div class="menu-grid">
-            <div class="menu-item">
-            <div class="item-header">
 
-                <h3 class="item-title">Deep Fried Cheesecake</h3>
-                <span class="item-price">$6.99</span>
-            </div>
-            </div>
-
-            <div class="menu-item">
+<div class="menu-item">
             <div class="item-header">
-                <h3 class="item-title">Apple Dumplin</h3>
-                <span class="item-price">$6.99</span>
+                <h3 class="item-title">Riley 1</h3>
+                <span class="item-price">$9.00</span>
             </div>
-            <p class="item-description">Flaky Apple Dumplin served with Ice Cream</p>
             </div>
 
             <div class="menu-item">
             <div class="item-header">
-                <h3 class="item-title">Rockslide Brownie</h3>
+                <h3 class="item-title">Riley 2</h3>
+                <span class="item-price">$9.00</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Italian Mango Margaritas</h3>
+                <span class="item-price">$9.00</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Gold Rush</h3>
+                <span class="item-price">$8.00</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Southern Slammer</h3>
+                <span class="item-price">$9.00</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Main Street Sunrise</h3>
+                <span class="item-price">$8.00</span>
+            </div>
+            </div>
+
+            <h3 style="padding: 5px; text-align: center; font-style: italic; background-color: #DCD27D;">- CLASSIC COCKTAILS -</h3>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Bloody Mary</h3>
+                <span class="item-price">$8.00</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Margarita</h3>
+                <span class="item-price">$7.00 </span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Moscow Mule</h3>
+                <span class="item-price">$7.00</span>
+            </div>
+            </div>
+           
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">L.I.T.</h3>
+                <span class="item-price">$8.00</span>
+            </div>
+            </div>
+
+  <h3 style="padding: 5px; text-align: center; font-style: italic; background-color: #DCD27D;">- MARTINI'S -</h3>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Dirty</h3>
+                <span class="item-price">$8.00</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Espresso</h3>
+                <span class="item-price">$9.00 </span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Lemon Drop</h3>
+                <span class="item-price">$8.00</span>
+            </div>
+            </div>
+           
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Pineapple Upsidedown</h3>
+                <span class="item-price">$8.00</span>
+            </div>
+            </div>
+
+  <h3 style="padding: 5px; text-align: center; font-style: italic; background-color: #DCD27D;">- ON THE ROCKS -</h3>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Whiskey Sour</h3>
+                <span class="item-price">$7.00</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Old Fashioned</h3>
+                <span class="item-price">$8.00 </span>
+            </div>
+            </div>
+        
+            <h3 style="padding: 5px; text-align: center; font-style: italic; background-color: #DCD27D;">-   BEER - BOTTLE/CAN -</h3>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Bud Light</h3>
+                <span class="item-price">$4.00</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Budweiser</h3>
+                <span class="item-price">$4.00</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Coors</h3>
+                <span class="item-price">$4.00</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Coors Banquet</h3>
+                <span class="item-price">$4.00</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Corona</h3>
+                <span class="item-price">$5.25</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Micelob Ultra</h3>
+                <span class="item-price">$4.25</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Miller Lite</h3>
+                <span class="item-price">$4.25</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Modelo</h3>
+                <span class="item-price">$5.25</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Drink3</h3>
                 <span class="item-price">$6.99</span>
             </div>
-            <p class="item-description">Hot Brownie topped with Caramel & Pecans served with Ice Cream</p>
             </div>
 
+            <h3 style="padding: 5px; text-align: center; font-style: italic; background-color: #DCD27D;">- DRAFT BEER -</h3>
 
+           <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Bud Light</h3>
+                <span class="item-price">$4.50</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Micelob Ultra</h3>
+                <span class="item-price">$4.75</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Miller Lite</h3>
+                <span class="item-price">$4.50</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Ask about our rotating taps!</h3>
+                <span class="item-price">Price Varies</span>
+            </div>
+            </div>
+
+            <h3 style="padding: 5px; text-align: center; font-style: italic; background-color: #DCD27D;">-   BOURBON WHISKEY -</h3>
+
+           <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Buffalo Trace</h3>
+                <span class="item-price">$7.00</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Eagle Rare</h3>
+                <span class="item-price">$8.00</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">E.H. Taylor</h3>
+                <span class="item-price">$9.00</span>
+            </div>
+            </div>
+
+            <div class="menu-item">
+            <div class="item-header">
+                <h3 class="item-title">Fireball</h3>
+                <span class="item-price">$5.00</span>
+            </div>
+            </div>            
     </section>
 
     <div id="menuCloseBtn" onclick="closeAllMenus()">X</div>
