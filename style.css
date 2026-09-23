@@ -232,6 +232,21 @@ section {
     color: black;
 }
 
+.menuSelectionImages {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.menuSelectionImg {
+    width: 20%;
+    height: auto;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 8px 8px var(--DoM-Yellow);
+}
+
 #menuAppetizers, #menuEntrees {
     display: none;
 }
@@ -654,6 +669,11 @@ footer {
 
 .mCatTitle {
     font-size: .5em;
+}
+
+.menuSelectionImg {
+    width: 33%;
+    height: auto;
 }
 
 #bandBioContainer {
