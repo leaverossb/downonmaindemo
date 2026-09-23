@@ -198,7 +198,7 @@ function showMenuSweets() {
 }
 
 function showMenuDrinks() {
-  if (!menuSweetsVisible) {
+  if (!menuDrinksVisible) {
     closeAllMenus();
     document.getElementById('menuContainer').style.display = 'block';
     document.getElementById('menuDrinks').style.display = 'block';
