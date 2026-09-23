@@ -197,10 +197,23 @@ function showMenuSweets() {
   }
 }
 
+function showMenuDrinks() {
+  if (!menuSweetsVisible) {
+    closeAllMenus();
+    document.getElementById('menuContainer').style.display = 'block';
+    document.getElementById('menuDrinks').style.display = 'block';
+    window.location.hash ="#foodDrink";
+    menuDrinksVisible = true;
+  } else {
+
+    closeAllMenus();
+  }
+}
 function closeAllMenus() {
     menuAppsVisible = false;
     menuEntreesVisible = false;
     menuSweetsVisible = false;
+    menuDrinksVisible = false;
     document.getElementById('menuContainer').style.display = 'none';
     document.getElementById('menuBurgers').style.display = 'none';
     document.getElementById('menuSandwiches').style.display = 'none';
@@ -212,6 +225,7 @@ function closeAllMenus() {
     document.getElementById('menuSides').style.display = 'none';
     document.getElementById('menuSweets').style.display = 'none';
     document.getElementById('menuAppetizers').style.display = 'none';
+    document.getElementById('menuDrinks').style.display = 'none';
     window.location.hash ="#foodDrink";
 }
 
