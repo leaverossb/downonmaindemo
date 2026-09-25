@@ -9,13 +9,16 @@ document.addEventListener("DOMContentLoaded", () => {
       'https://www.youtube.com/embed/YqYSDkRZr6U?si=vIB_aBXFZtXt8Ibc',
       'https://www.youtube.com/embed/rRjU6TeEMu8?si=tSe79-Gb_w1VeEkx',
       'https://www.youtube.com/embed/wVnn10Ma4bE?si=9hQPc3eOgwsjCXoX',
-      'https://www.youtube.com/embed/ix_mf3q_1lM?si=QayQPWq7CSnUjx57'];
+      'https://www.youtube.com/embed/2vkKu1Fvti0?si=Zu5xPuPO-d_JZ5q6',
+      'https://www.youtube.com/embed/yojg6hohGjI?si=_1t4yUrZIyAmIasS',
+      'https://www.youtube.com/embed/ix_mf3q_1lM?si=XWaOm5poWOLZP6Gs'];
 
     let randomLink = Math.floor(Math.random() * videoLinks.length);;
 
     document.getElementById('performanceVidLink').src = videoLinks[randomLink];
 });
 
+<iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 /*************
     BANDS
