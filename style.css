@@ -50,6 +50,12 @@ section {
 
 }
 
+.description-container iframe{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
 .food-image-container{
     text-align: center;
     background-color: black;
