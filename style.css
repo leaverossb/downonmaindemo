@@ -44,6 +44,7 @@ section {
 }
 
 .description-container{
+    box-sizing: border-box;
     padding: 20px;
     background-color: var(--DoM-Brown);
     color: wheat;
@@ -51,7 +52,8 @@ section {
 }
 
 .description-container iframe{
-    width: 100%;
+    box-sizing: border-box;
+    width: 60%;
     height: auto;
     aspect-ratio: 16 / 9;
 }
@@ -700,11 +702,24 @@ footer {
 }
 }
 
+.description-container iframe{
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
 
 @media (orientation: landscape) and (max-height: 480px) {
 
-    #bandPicSmall {
+#bandPicSmall {
     display: none;
+}
+
+.description-container iframe{
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
 }
 
 }
