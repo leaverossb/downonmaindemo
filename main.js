@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       'https://www.youtube.com/embed/wVnn10Ma4bE?si=9hQPc3eOgwsjCXoX',
       'https://www.youtube.com/embed/ix_mf3q_1lM?si=QayQPWq7CSnUjx57'];
 
-    let randomLink = Math.floor(Math.random() * videoLinks.length -1);;
+    let randomLink = Math.floor(Math.random() * videoLinks.length);;
 
     document.getElementById('performanceVidLink').src = videoLinks[randomLink];
 });
