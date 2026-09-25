@@ -1,3 +1,18 @@
+/*************
+    ON PAGE LOAD
+ *************/
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    let videoLinks = [
+      'https://www.youtube.com/embed/3i1xVRDGmEI?si=QjO8wlLcpZR0nGCF',
+      'https://www.youtube.com/embed/YqYSDkRZr6U?si=vIB_aBXFZtXt8Ibc'];
+
+    let randomLink = 0;
+
+    document.getElementById('performanceVidLink').src = videoLinks[randomLink];
+});
+
 
 /*************
     BANDS
